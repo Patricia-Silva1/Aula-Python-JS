@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio</title>
+        <style>
+            div {
+                text-align: center;
+            }
+            img {
+                width: auto; height: 500px;
+                border: 3px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Slideshow</h1>
+            <div>
+                <button id="anterior" onclick="muda('ant')">ANTERIOR</button>
+                <img id="imagem" src="#">
+                <button id="proxima" onclick="muda('prox')">PROXIMA</button>
+            </div>
+            <div id="info">
+            </div>
+        </div>
+        <script>
+            var indice = 0;
+            var fotos = ['img1.jpg','img2.jpg','img3.jpg','img4.jpg','img5.jpg']
+            mostraFoto();
+
+            function mostraFoto() {
+                document.getElementById("imagem").src = "img/"+fotos[indice];
+                document.getElementById("info").innerHTML = 
+                            "Imagem "+ (indice+1) +" de "+ fotos.length;
+            }
+
+            function muda(direcao) {
+                if ((direcao == 'ant') && (indice > 0)) {
+                    indice--;
+                } else if ((direcao == 'prox') && (indice < (fotos.length-1))) {
+                    indice++;
+                }
+                mostraFoto();
+            }
+        </script>
+    </body>
+</html>

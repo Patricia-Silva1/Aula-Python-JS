@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Página Inicial do Servidor Web</title>
+    </head>
+    <body>
+        <h1>Olá.</h1>
+        <h2>Esta é a página inicial do seu servidor web.</h1>
+        <p>Exemplo 1: Clique <a href="Aula08_exemplo1.html">AQUI</a> para 
+            executar um exemplo de acionamento de um <br>
+            script CGI escrito em linguagem Python que está no servidor</p> 
+        <p>Exemplo 2: Clique <a href="Aula08_exemplo2.html">AQUI</a> 
+            para executar um exemplo de tratamento<br>]
+            dos campos de um formulário.</p> 
+        <p>Exemplo 3: Clique <a href="Aula08_exemplo3.html">AQUI</a> para 
+            executar um exemplo de uso de cookies para<br>
+            autenticar um usuário.</p>
+        <p id="msg"></p>
+        <script>
+            var msgCookie = document.cookie;
+            document.getElementById("msg").innerHTML =
+                    msgCookie;
+        </script>
+    </body>
+</html>

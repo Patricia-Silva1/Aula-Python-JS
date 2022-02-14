@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exemplo 2 - Teste de Formulário</title>
+    </head>
+    <body>
+        <h1>Enviando os dados de um formulário ao servidor python</h1>
+        <form action="cgi-bin/recebeDados.py"
+            method="get">
+            <table style="border:0px">
+                <tr>
+                    <td>Nome</td><td><input type="text" name="nome"></td>
+                </tr>
+                <tr>
+                    <td>Sobrenome</td><td><input type="text" name="sobrenome"></td>
+                </tr>
+                <tr>
+                    <td>Cor Preferida</td><td><input type="text" name="corpref"></td>
+                </tr>
+                <tr>
+                    <td>Bebida</td><td><input type="text" name="bebida"></td>
+                </tr>
+            </table>
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</html>
